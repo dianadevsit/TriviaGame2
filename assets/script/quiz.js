@@ -63,6 +63,44 @@ const guageUnit = guageWidth / questionTime;
 var TIMER;
 var score = 0;
 
+//render a question
 
+function renderQuestion(){
+    //q for question
+    var q = questions[runningQuestion];
+
+    question.innerHTML = "<p>" + q.question + "</p>";
+    qImg.innerHTML = "<img src=" + q.imgSrc +">";
+    choiceA.innerHTML = q.choiceA;
+    choiceB.innerHTML = q.choiceB;
+    choiceC.innerHTML = q.choiceC;
+}
+
+//
+start.addEventListener("click", startQuiz);
+
+//start the quiz
+
+function startQuiz() {
+    start.style.display = "none";
+    renderQuestion();
+    quiz.style.display = "block";
+    renderProgress();
+    renderCounter();
+    //1000ms = 1s
+    TIMER = setInterval(renderCounter, 1000);
+
+}
+
+
+//render progress to show the progress bar during the quiz
+//will be a for loop will start at 0 and end at lasQuestionIndex
+function renderProgress() {
+    for(var qIndex = 0; qIndex <= lastQuestion; qIndex++){
+        progress.innerHTML+= "div class='prog' id=" + qIndex + "></div>";
+    }
+}
+
+//counter render
 
 
