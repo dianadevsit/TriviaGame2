@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div id="start"> Start the Quiz!</div>
+        <!-- starts quiz with button at beginning of quiz  -->
+    <div id="quiz" style="display: none;">
+        <!-- question image and question itself -->
+    <div id="qImage"><!--img src for question --></div>
+    <div id="question"><p> Question </p></div>
+        <!--timer -- counting fown from 15 seconds per question -->
+    <div id="timer">
+    <div id="counter"> 15 </div>
+        <!--background time gauge and tme gauge-->
+    <div id="btimeGauge"></div>
+    <div id="timeGauge"></div>
+    </div>    
+    <!-- choices: diff id for choices, then onclick. after onclick will check answer  -->
+    <div id="choices">
+        <div class="choice" id="A" onclick="checkAnswer('A')">A</div>
+        <div class="choice" id="B" onclick="checkAnswer('B')">B</div>
+        <div class="choice" id="C" onclick="checkAnswer('C')">C</div>
+    </div>    
+    <!-- progress will tell user how many ques they will answer and if they answered correctly or not -->
+    <div id="progress"> <div class="prog"> </div>
+</div>
+    
+    
+    
+    </div>
+    <!-- keep score -->
+    <div id="scoreContainer" style="display: none;">
+    <img src="assets/images/greensmileyface.jpg"><p>50%</p>
+    </div>
+    <script src="assets/script/quiz.js/"></script>
+</body>
+</html>
