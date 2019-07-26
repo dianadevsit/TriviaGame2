@@ -20,25 +20,49 @@ var questions = [
     {
         question: "What does HTML stand for?",
         imgSrc: "./assets/images/html.jpg",
-        choiceA: "Correct",
-        choiceB: "Wrong",
-        choiceC: "Wrong",
+        choiceA: "Hyper Text Markup Language",
+        choiceB: "Hyperlinnks and Text Markup Languages",
+        choiceC: "Home Tool Markup Language",
         correct: "A"
     },{
         question: "What does CSS stand for?",
         imgSrc: "./assets/images/css.jpg",
-        choiceA: "Wrong",
-        choiceB: "Correct",
-        choiceC: "Wrong",
+        choiceA: "Cascading Source Sheets",
+        choiceB: "Cascading Style Sheets",
+        choiceC: "Color Style Sheets",
         correct: "B"
     },{
         question: "What does JS stand for?",
         imgSrc: "./assets/images/js.png",
-        choiceA: "Wrong",
-        choiceB: "Correct",
-        choiceC: "Wrong",
+        choiceA: "JavaScreen",
+        choiceB: "Javascript",
+        choiceC: "Java",
         correct: "B"
     }
 ];
 
 //created variables
+//length property returns the length of a string (number of characters)
+//this will show the questions of four and we are minusing one to show the array of 3
+const lastQuestion = question.length - 1;
+
+//this is the question the user is answering
+var runningQuestion = 0;
+var count = 0;
+
+//ten seconds to answer each questions
+const questionTime =10;
+
+//measure gauge in px
+const guageWidth = 150;
+
+//time of question
+const guageUnit = guageWidth / questionTime;
+
+//timer
+var TIMER;
+var score = 0;
+
+
+
+
