@@ -44,7 +44,7 @@ var questions = [
 //created variables
 //length property returns the length of a string (number of characters)
 //this will show the questions of four and we are minusing one to show the array of 3
-const lastQuestion = question.length - 1;
+const lastQuestion = questions.length - 1;
 
 //this is the question the user is answering
 var runningQuestion = 0;
@@ -133,6 +133,8 @@ function checkAnswer(answer){
     answerIsWrong();
     }
     count = 0;
+    console.log(runningQuestion);
+    console.log(lastQuestion);
     if(runningQuestion < lastQuestion){
         runningQuestion++;
         renderQuestion();
